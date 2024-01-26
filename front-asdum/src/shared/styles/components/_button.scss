@@ -1,0 +1,161 @@
+.btn__primary {
+    background-color: $mainColor !important;
+    display: flex;
+    align-items: center;
+    color: $whiteColor !important;
+    text-transform: capitalize !important;
+    border-radius: 4px !important;
+    gap: 5px;
+    padding: 8px 12px !important;
+}
+
+.btn__primary__dark {
+    background-color: $darkerColor !important;
+    display: flex;
+    align-items: center;
+    color: $whiteColor !important;
+    padding: 8px 10px !important;
+    border-radius: 4px !important;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+.btn__secondary {
+    color: rgba(96, 111, 137, 0.5) !important;
+    padding: 8px 10px !important;
+}
+
+.btn__disabled {
+    background-color: $lightGrayColor !important;
+}
+
+.btn__info {
+    background-color: $subtleLightColor !important;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 13px;
+    color: rgba(96, 111, 137, 0.7) !important;
+}
+
+.btn__success,
+.btn__gray {
+    color: $whiteColor !important;
+    padding: 8px 10px !important;
+    border-radius: 4px !important;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+.btn__success {
+    background-color: $successColor !important;
+}
+
+.btn__gray {
+    background-color: $whiteColor;
+    border: 1px solid #c6cad8 !important;
+    color: #475366 !important;
+}
+
+.btn__delete {
+    // background-color: #ff3355 !important;
+    background-color: $errorColor !important;
+    text-transform: capitalize !important;
+    gap: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn__danger {
+    background-color: $errorColor !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 8px 10px !important;
+    font-size: 14px !important;
+    color: $whiteColor !important;
+
+    span {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.btn__outline {
+    gap: 7px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 1px solid $violetText !important;
+    color: $blueDark !important;
+    text-transform: capitalize !important;
+    border-radius: 4px !important;
+    padding: 8px 12px !important;
+}
+
+.hover__btn__success {
+    &:hover {
+        background-color: $successColor !important;
+        color: $whiteColor !important;
+    }
+}
+
+.hover__btn__primary {
+    &:hover {
+        background-color: $mainColor !important;
+        color: $whiteColor !important;
+    }
+}
+
+.export__btn__primary {
+    color: #fff !important;
+    background-color: #606eea !important;
+}
+
+.primary_btn,
+.primary_filled_btn,
+.reset_btn,
+.success_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    text-transform: none;
+}
+
+.primary_btn {
+    background-color: $whiteColor !important;
+    border: 1px solid $mainColor !important;
+    color: $mainColor !important;
+}
+
+.primary_filled_btn {
+    background-color: $mainColor;
+    color: $whiteColor;
+    .MuiLoadingButton-loadingIndicator {
+        color: #fff;
+    }
+    // color: $whiteColor !important;
+}
+
+.success_btn {
+    background-color: $successColor;
+    color: $whiteColor;
+    .MuiLoadingButton-loadingIndicator {
+        color: #fff;
+    }
+}
+
+.reset_btn {
+    border: 1px solid #c6cad8 !important;
+    color: #ff3b3b !important;
+}

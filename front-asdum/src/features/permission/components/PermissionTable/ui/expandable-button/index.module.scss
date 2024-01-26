@@ -1,0 +1,26 @@
+.expandableButton {
+    display: inline-block;
+    button {
+        min-width: 20px;
+        height: 20px;
+        border-radius: 4px;
+        background: #a4adb9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+            color: #fff !important;
+            font-size: 10px;
+        }
+
+        &:hover {
+            background: #a4adb9;
+        }
+    }
+}
+
+.active {
+    transform: rotate(180deg);
+    transform-origin: 'top';
+}

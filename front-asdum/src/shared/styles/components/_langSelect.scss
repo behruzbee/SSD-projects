@@ -1,0 +1,63 @@
+.langWrap {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    margin-right: 30px;
+
+    .langWrap__list {
+        position: relative;
+        height: 32px;
+        overflow: hidden;
+        transition: height 0.1s ease-in-out;
+    }
+
+    .active {
+        height: 100px;
+        position: relative;
+        // transition: all 0.3s ease-in-out;
+    }
+
+    .openSelect {
+        height: auto;
+        overflow: visible;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .langWrap__option {
+        position: relative;
+        margin-top: -36px;
+        transform: translateY(50%);
+        box-shadow: inset 0px 0px 10px rgba(183, 186, 199, 0.3);
+        border-radius: 18px;
+        background-color: #fff;
+
+        .langWrap__item {
+            display: flex;
+            align-items: center;
+            padding: 8px;
+            white-space: nowrap;
+
+            .langName {
+                margin-left: 10px;
+                font-weight: 600;
+                font-size: 10px;
+                line-height: 16px;
+                color: #191a1d;
+            }
+        }
+    }
+}
+
+.langWrap__down {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.langWrap_arrow {
+    width: 10px;
+    height: 5px;
+}

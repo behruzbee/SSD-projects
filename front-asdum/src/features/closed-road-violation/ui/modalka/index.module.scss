@@ -1,0 +1,44 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+.dcontent {
+    background-color: #fff;
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+.title {
+    font-size: 14px;
+    line-height: 16px;
+    background-color: #fff;
+}
+.selected {
+    color: aqua;
+}
+.element {
+    color: aquamarine;
+}
+.comment {
+    width: 456px;
+    height: 88px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 8px;
+}
+.status {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 16px;
+    .radio {
+        align-items: center;
+        .radioTxt {
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 600;
+        }
+    }
+}

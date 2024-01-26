@@ -1,0 +1,28 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.control {
+	padding: 4px 6px;
+}
+
+.label {
+	padding: 6px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 14px;
+}
+
+.chevron {
+	transform: rotate(-90deg);
+
+	&[data-rotate] {
+		transform: rotate(0);
+	}
+}
+
+.content {
+	padding: 0;
+}

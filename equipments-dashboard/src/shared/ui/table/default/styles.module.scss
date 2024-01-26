@@ -1,0 +1,23 @@
+.noData {
+	width: 100%;
+	min-height: 20vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 700;
+	font-size: 22px;
+}
+
+.tableWrapper {
+	overflow-y: auto;
+	flex: auto;
+	height: calc(100vh - 200px);
+}
+
+.table {
+	background-color: #fff;
+
+	td {
+		color: #667085;
+	}
+}

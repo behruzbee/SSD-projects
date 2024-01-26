@@ -1,0 +1,72 @@
+@import '@styles/base/colors';
+
+.editVehicleWrapper {
+    padding: 25px 18px 0 18px;
+
+    .vehicleRouteTab {
+        width: auto;
+        display: flex;
+        align-items: center;
+        margin-bottom: 36px;
+    }
+
+    .editVehicleWrapper__title,
+    .editVehicleWrapper__subtitle {
+        border-bottom: 1px solid $grayIcon;
+        padding-bottom: 12px;
+        margin: 0 0 24px 0;
+        color: #070f3f;
+    }
+
+    .editVehicleWrapper__subtitle {
+        font-size: 18px;
+    }
+
+    .editVehicleWrapper__title {
+        font-size: 24px;
+    }
+
+    .vehicleRouteTab__btn {
+        width: 184px;
+        height: 52px;
+        display: flex;
+        text-decoration: none;
+        align-items: center;
+        background-color: $whiteColor;
+        color: $darkerBlue;
+        font-size: 14px;
+        font-weight: bold;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        justify-content: center;
+        transition: all 0.4s linear;
+        box-shadow: 0px 2.1776px 2.1776px rgba(0, 29, 63, 0.09),
+            0px 1.0888px 5.44399px rgba(0, 29, 63, 0.1);
+        .vehicleRouteTab__title {
+            display: block;
+        }
+        svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        &:disabled {
+            cursor: not-allowed;
+        }
+    }
+
+    .savedRoutePart {
+        color: #06c270;
+        svg path {
+            fill: #06c270;
+        }
+    }
+    .activeVehicleRouteTab {
+        background-color: $mainColor;
+        color: #fff;
+        svg path {
+            fill: #fff;
+        }
+    }
+}

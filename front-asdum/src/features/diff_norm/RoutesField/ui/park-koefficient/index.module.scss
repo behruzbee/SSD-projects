@@ -1,0 +1,98 @@
+.parkKoefficientItems,
+.parkKoefficient {
+    display: flex;
+}
+
+.parkKoefficient {
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    border-radius: 0;
+    position: sticky;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    box-shadow: 0px 1px 2px rgba(31, 37, 51, 0.08);
+}
+
+.parkKoefficientGray {
+    background-color: #f5f5f5;
+}
+
+.parkKoefficientItems {
+    gap: 16px;
+    align-items: flex-end;
+}
+
+.koefficientHeaderTitle {
+    font-size: 20px;
+    line-height: 23px;
+    color: #070f3f;
+}
+
+.koefficientBtn,
+.koefficientApproveBtn {
+    height: 40px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    text-transform: none;
+}
+
+.koefficientResetBtn {
+    width: 40px;
+}
+
+.activeCoefficient {
+    background: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.22),
+            rgba(255, 255, 255, 0.22)
+        ),
+        rgba(0, 255, 56, 0.21);
+
+    .koefficientBtn,
+    .koefficientApproveBtn {
+        background-color: #fff;
+    }
+
+    &:hover {
+        background: linear-gradient(
+                0deg,
+                rgba(255, 255, 255, 0.22),
+                rgba(255, 255, 255, 0.22)
+            ),
+            rgba(0, 255, 56, 0.21);
+    }
+}
+
+.inactiveCoefficient {
+    background: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.22),
+            rgba(255, 255, 255, 0.22)
+        ),
+        rgba(255, 38, 38, 0.34);
+
+    .koefficientBtn,
+    .koefficientApproveBtn {
+        background-color: #fff;
+    }
+
+    &:hover {
+        background: linear-gradient(
+                0deg,
+                rgba(255, 255, 255, 0.22),
+                rgba(255, 255, 255, 0.22)
+            ),
+            rgba(255, 38, 38, 0.34);
+    }
+}
+
+.activeKoefficientBtn {
+    background: #606eea;
+    color: #fff;
+
+    &:hover {
+        background: #606eea;
+    }
+}

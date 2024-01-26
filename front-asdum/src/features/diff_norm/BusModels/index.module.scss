@@ -1,0 +1,76 @@
+@import '@styles/base/colors';
+
+.dcontent {
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: $subtleColor;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $lightColor;
+        border-radius: 3px 0px 3px 3px;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-width: 325px;
+    border-radius: 3px;
+    overflow-y: auto;
+    border: 1px solid $grayBorder;
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.1));
+    background: $whiteColor;
+    color: $darkerBlue;
+    overflow: hidden;
+
+    .header {
+        padding: 16px;
+        align-items: center;
+
+        .title {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.2px;
+            color: $darkerBlue;
+        }
+    }
+
+    .element {
+        display: flex;
+        gap: 6px;
+        padding: 16px;
+        align-items: center;
+
+        &:hover {
+            background: $tableGrayColor;
+            cursor: pointer;
+        }
+    }
+
+    .selected {
+        display: flex;
+        gap: 6px;
+        padding: 16px;
+        align-items: center;
+        background: $violetText;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .checkBox {
+        padding: 0;
+    }
+}

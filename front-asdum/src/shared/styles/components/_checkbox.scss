@@ -1,0 +1,22 @@
+.checkbox__wrapper {
+    span.MuiCheckbox-colorSecondary.Mui-checked {
+        color: $mainColor !important ;
+    }
+    span.MuiCheckbox-colorSecondary {
+        color: $subtleGrayColor !important ;
+    }
+    span.MuiTypography-body1 {
+        font-weight: 500 !important ;
+        font-size: 16px !important ;
+        color: $mainDarkColor !important ;
+    }
+    @media (min-width: 968px) {
+        span.MuiTypography-body1 {
+            font-size: 18px !important ;
+        }
+    }
+}
+
+.table_check {
+    padding: 15px;
+}

@@ -1,0 +1,15 @@
+.leaflet-control-attribution {
+    display: none !important;
+}
+
+// .leaflet-marker-draggable,
+// .leaflet-editing-icon .leaflet-touch-icon
+.leaflet-touch-icon {
+    width: 17px !important;
+    height: 23px !important;
+    background-image: url('./Vector.svg') !important;
+    background-size: contain !important;
+    background-repeat: no-repeat;
+    border: none;
+    background: transparent;
+}

@@ -1,0 +1,51 @@
+.chip__success {
+    color: $chipSuccess !important;
+    border: 1.5px solid $chipSuccess !important;
+    font-weight: normal;
+}
+
+.chip__inactive {
+    border: 1.5px solid;
+    font-weight: normal;
+}
+
+.bus__icon {
+    width: 18px;
+    height: 18px;
+}
+
+.round_icon {
+    padding: 4px 8px;
+    border: none;
+    border-radius: 40px;
+    background-color: #f2f3f4;
+    color: #475366;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+}
+
+.avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: $grayIcon;
+    color: $whiteColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.green {
+    color: $successColor;
+}
+
+.yellow {
+    color: $warningColor;
+}
+
+.red {
+    color: $errorColor;
+}

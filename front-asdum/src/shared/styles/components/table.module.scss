@@ -1,0 +1,132 @@
+@import '@styles/base/colors';
+
+.container {
+    background-color: $whiteColor;
+    border-radius: 12px;
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.1));
+    overflow-x: auto;
+
+    .table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        background-color: #f5f5f5;
+        border-radius: 12px;
+        border: 1px solid $tableGray;
+        overflow: hidden;
+
+        th,
+        td {
+            padding: 8px !important;
+        }
+
+        .theader th:not(:last-child),
+        .tbody td:not(:last-child) {
+            border-right: 1px solid $tableGray;
+        }
+        .theader {
+            width: 100%;
+
+            .thRow {
+                font-size: 12px;
+                .th {
+                    color: $darkerBlue;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 17px;
+                    padding: 8px 18px;
+                }
+
+                .thFirst {
+                    content: '';
+                }
+            }
+        }
+
+        .tbody {
+            .bodyRow {
+                font-size: 12px;
+
+                &:hover {
+                    color: $mainColor;
+                    cursor: pointer;
+
+                    color: $mainColor;
+
+                    input {
+                        color: $mainColor;
+                    }
+
+                    td {
+                        color: $mainColor !important;
+
+                        svg {
+                            path {
+                                fill: $errorColor;
+                            }
+                        }
+                    }
+                }
+
+                .td {
+                    color: $darkerBlue;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 17px;
+                    padding: 8px 18px;
+                    text-align: center;
+                }
+
+                td:first-child {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+.table thead > tr:not(:last-child) > td,
+.table tbody > tr:not(:last-child) > th,
+.table thead > tr:not(:last-child) > th,
+.table tbody > tr:not(:last-child) > td,
+.table tfoot > tr:not(:last-child) > th,
+.table tfoot > tr:not(:last-child) > td,
+.table tr:not(:last-child) > td,
+.table tr:not(:last-child) > th,
+.table thead:not(:last-child),
+.table tbody:not(:last-child),
+.table tfoot:not(:last-child) {
+    border-bottom: 1px solid $tableGray;
+}
+
+// Editable Cell
+.inputData {
+    background-color: $whiteColor;
+    border: 1px solid $tableGray;
+    border-radius: 4px;
+    color: $darkerBlue;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+    width: 50px;
+    height: 40px;
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type='number'] {
+        -moz-appearance: textfield;
+    }
+
+    &:focus-within {
+        border: 1px solid $mainColor;
+        outline: none;
+    }
+}

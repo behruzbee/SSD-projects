@@ -1,0 +1,24 @@
+.orderChip {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 12px;
+    position: relative;
+    border-left: 3px solid #4455ea;
+
+    p {
+        margin: 0;
+    }
+}
+
+.orderChipTitle {
+    color: #191a1d;
+    white-space: nowrap;
+    line-height: 1.25rem;
+}
+
+.orderChipSubtitle {
+    color: #a4adb9;
+    white-space: nowrap;
+    line-height: 1.25rem;
+}

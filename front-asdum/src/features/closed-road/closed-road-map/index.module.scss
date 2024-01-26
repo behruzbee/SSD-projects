@@ -1,0 +1,22 @@
+.closedRoadMapContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 35px;
+
+    h2 {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.closedRoadMap {
+    height: 700px;
+    border-radius: 20px;
+    overflow: hidden;
+
+    .map {
+        width: 100%;
+        height: 100%;
+    }
+}

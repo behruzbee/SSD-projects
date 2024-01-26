@@ -1,0 +1,12 @@
+.item {
+	a {
+		display: block;
+		padding: 8px 16px 8px 36px;
+		color: #000;
+		font-size: 14px;
+
+		&[class="active"] {
+			background-color: rgba(68, 85, 234, 0.2);
+		}
+	}
+}

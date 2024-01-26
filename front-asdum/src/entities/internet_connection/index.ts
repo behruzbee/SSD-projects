@@ -1,0 +1,1 @@
+export {checkInternetStore} from './model';

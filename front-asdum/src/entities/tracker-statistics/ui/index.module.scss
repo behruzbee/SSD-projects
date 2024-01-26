@@ -1,0 +1,23 @@
+.trackerAccordeonWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px;
+}
+
+.accordeonTitle {
+    padding: 0 10px 0 0;
+
+    &::after {
+        content: '|';
+        margin-left: 10px;
+    }
+
+    &:last-child {
+        padding-right: 0;
+    }
+
+    &:last-child::after {
+        content: '';
+    }
+}

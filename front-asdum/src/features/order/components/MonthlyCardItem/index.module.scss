@@ -1,0 +1,146 @@
+@import 'src/shared/styles/base/colors';
+
+.cardWrapper {
+    display: flex;
+    flex-direction: column;
+    //width: 100%;
+    gap: 14px;
+    border-radius: 0 8px 8px 0;
+    padding: 10px 20px 10px 40px;
+    border: none;
+    background-color: $whiteColor;
+    transition: 0.3s all linear;
+    cursor: pointer;
+    height: fit-content;
+
+    &:hover {
+        background-color: $whiteColor;
+    }
+
+    .order__card__row {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .order__card__chip {
+        background-color: $darkerColor;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 33px;
+        padding: 6px;
+        color: $violetText;
+        font-size: 12px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    .order__card__item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .order__card__header {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 52px;
+        overflow: hidden;
+        box-shadow: 0px 1px 0px $tableGray;
+
+        .order__card__id {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 100%;
+            background-color: $darkerColor;
+        }
+
+        .order__card__head__side {
+            display: flex;
+            width: 90%;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 12px 0 10px;
+        }
+    }
+
+    .order__card__body {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px 16px;
+        box-shadow: 0px 1px 0px $tableGray;
+    }
+
+    .order__card__footer {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px 16px;
+    }
+}
+
+.cardBtn {
+    width: 100%;
+    height: fit-content;
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #dee1fe;
+    border-radius: 8px 0 0 8px;
+    padding: 6px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+
+    h4 {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: #070f3f;
+        margin: 0;
+        writing-mode: vertical-lr;
+        transform: rotate(-180deg);
+        white-space: nowrap;
+    }
+}
+
+.cardWrap {
+    width: 100%;
+    position: relative;
+    // display: flex;
+    // align-items: stretch;
+}
+
+.cardBody {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.orderTableWrap {
+    display: flex;
+    width: 100%;
+    overflow: auto;
+}
+
+.orderTable {
+    width: 100%;
+}
+
+.orderTableActions {
+    display: flex;
+    flex-wrap: 20%;
+    align-items: center;
+    gap: 8px;
+}

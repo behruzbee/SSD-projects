@@ -1,0 +1,49 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist",
+        "module": "esnext",
+        "target": "es6",
+        "lib": ["es6", "dom"],
+        "sourceMap": true,
+        "allowJs": true,
+        "jsx": "react",
+        "moduleResolution": "node",
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "types": ["vite/client"],
+        "baseUrl": "./",
+        "rootDir": "./",
+        "typeRoots": ["./node_modules/@types", "./src/@types"],
+        "paths": {
+            "@images/*": ["src/images/*"],
+            "@styles/*": ["src/shared/styles/*"],
+            "@api/*": ["src/shared/api/*"],
+            "@components/*": ["src/shared/components/*"],
+            "@models/*": ["src/shared/models/*"],
+            "@views/*": ["src/views/*"],
+            "@shared/*": ["src/shared/*"],
+            "@store/*": ["src/shared/store/*"],
+            "@features/*": ["src/features/*"],
+            "@entities/*": ["src/entities/*"],
+            "@widgets/*": ["src/widgets/*"],
+            "@src/*": ["src/*"],
+            "@assets/*": ["src/assets/*"]
+        },
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "importsNotUsedAsValues": "preserve",
+        "incremental": true
+    },
+    "ts-node":
+{
+    "compilerOptions": {
+        "module": "CommonJS"
+    }
+},
+
+    "include": ["src", "vite.config.ts"],
+    "exclude": ["**/node_modules", "**/.*/"],
+    "typeRoots": ["../node_modules/@types", "../@types"]
+}

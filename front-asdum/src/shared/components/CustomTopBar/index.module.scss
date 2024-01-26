@@ -1,0 +1,70 @@
+@import '@src/shared/styles/base/colors';
+
+.wrapper {
+    width: 100%;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: stretch;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 16px;
+    gap: 8px;
+    background: $whiteColor;
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.04);
+    position: fixed;
+    top: 56px;
+    z-index: 1200;
+
+    // & + div {
+    //   margin-top: 76px;
+    // }
+
+    .title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        color: $darkerBlue;
+    }
+
+    .rightSide {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+
+        & > div:not(.generate) {
+            margin-right: 0;
+        }
+
+        & > div.generate {
+            margin-left: -12px;
+        }
+
+        .generate {
+            display: flex;
+            flex-direction: row;
+            height: 40px;
+
+            .button {
+                background: $mainColor;
+                border-radius: 0px 4px 4px 0px;
+                height: 40px;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 24px;
+                text-transform: capitalize;
+                color: $whiteColor;
+                padding: 8px 12px;
+                width: 100%;
+                max-width: 122px;
+            }
+        }
+    }
+}
+
+.topbarDaypicker {
+    background-color: #fff !important;
+}

@@ -1,0 +1,82 @@
+.text_field {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.3px;
+    color: $subDarkBlue;
+}
+
+.headText {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    /* identical to box height, or 133% */
+
+    color: $darkerBlue;
+}
+
+.sub_head_text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 32px;
+    color: $darkerBlue;
+    margin: 0;
+}
+
+.violet__text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    /* identical to box height, or 100% */
+
+    letter-spacing: -0.01em;
+
+    /* Фон */
+
+    color: $violetText;
+}
+
+.order__card__text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    /* identical to box height, or 100% */
+
+    letter-spacing: -0.01em;
+
+    /* Font Color Таблица */
+
+    color: $grayerColor;
+    margin: 0;
+}
+
+.f_16 {
+    font-size: 18px;
+}
+
+.table_td {
+    margin: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height, or 141% */
+
+    display: flex;
+    align-items: center;
+
+    /* Font color */
+
+    color: $darkerBlue;
+}

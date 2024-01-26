@@ -1,0 +1,24 @@
+.checkbox {
+    position: absolute !important;
+    right: 0;
+}
+
+.customTree {
+    order: 0;
+}
+
+.treeIcon {
+    width: 10px;
+    height: 10px;
+}
+
+.statusWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.busStatus {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}

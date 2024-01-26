@@ -1,0 +1,12 @@
+@import '@styles/base/colors';
+
+.input {
+    .MuiFormHelperText-root,
+    p {
+        margin-left: 0 !important;
+    }
+}
+
+.disabled {
+    background-color: #f2f3f4 !important;
+}

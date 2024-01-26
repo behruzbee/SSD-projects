@@ -1,0 +1,24 @@
+.item-style {
+	padding: 10px 20px;
+	border-radius: 14px;
+	background-color: #fff;
+	color: #4455ea;
+	font-size: 18px;
+	border: 1px solid #4455ea;
+
+	&:global(.active) {
+		background-color: #4455ea;
+		color: #fff;
+	}
+}
+
+.tabsItem {
+	&:not(:global(.link)) {
+		@extend .item-style;
+	}
+
+	a {
+		@extend .item-style;
+		display: block;
+	}
+}

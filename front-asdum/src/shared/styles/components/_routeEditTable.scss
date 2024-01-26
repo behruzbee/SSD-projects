@@ -1,0 +1,88 @@
+@import '@styles/base/colors';
+
+.fulltable {
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.1));
+    max-height: 770px;
+    overflow-y: auto;
+}
+
+.fulltable table thead {
+    position: sticky;
+    background-color: #fff;
+    top: -1px;
+    z-index: 99;
+}
+
+.vehicleRouteTableWrapper {
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.1));
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.vehicleRouteTableWrapper table thead {
+    position: sticky;
+    top: -1px;
+    z-index: 99;
+}
+
+.routeEditTable {
+    width: 100%;
+    background-color: #f5f5f5;
+    color: #070f3f;
+    font-family: 'Roboto';
+    border: 1px solid #c6cad8;
+    border-collapse: collapse;
+
+    tr,
+    td,
+    th {
+        border: 1px solid #c6cad8;
+        border-collapse: collapse;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    tr:focus-within td,
+    tr:focus-within td input,
+    tr:focus-within td select {
+        color: #4455ea;
+    }
+    tr:focus-within td:nth-child(1) {
+        color: #070f3f;
+    }
+
+    input {
+        border: none;
+        outline: none;
+        outline: none;
+    }
+
+    td:focus-within {
+        background-color: $whiteColor;
+    }
+}
+
+.stationNameCell {
+    padding-left: 10px;
+}
+
+.tableInput {
+    width: 60px;
+    height: 37px;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Roboto';
+    color: #070f3f;
+}
+.tableInput:nth-child(1) {
+    background-color: $whiteColor;
+}
+
+.table-text-center {
+    padding: 10.5px 0;
+    text-align: center;
+}
+
+.tableInput:focus {
+    outline: 0.2px solid #0063f7;
+}

@@ -1,0 +1,26 @@
+.chipWrap,
+.chip {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.chipWrap {
+    gap: 10px;
+}
+.chip {
+    justify-content: center;
+    padding: 4px 8px;
+    background: #f2f3f4;
+    border-radius: 40px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #191a1d;
+}
+
+.overflow {
+    overflow-x: auto;
+}

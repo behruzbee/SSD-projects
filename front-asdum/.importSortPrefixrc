@@ -1,0 +1,19 @@
+{
+    "groupings": [
+        "@src",
+        [
+            "@components",
+            "@shared",
+            "@api",
+            "@styles",
+            "@models",
+            "@views",
+            "@store",
+            "@features"
+        ],
+        [
+            "@images",
+            "@styles"
+        ]
+    ]
+}

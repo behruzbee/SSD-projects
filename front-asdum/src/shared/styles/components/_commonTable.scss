@@ -1,0 +1,64 @@
+.commonTable {
+    width: 100%;
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.1));
+
+    table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        background-color: $whiteColor;
+    }
+
+    table thead {
+        position: sticky;
+        top: 0;
+        z-index: 99;
+        background-color: #fff;
+    }
+
+    thead tr:hover {
+        background-color: $whiteColor;
+    }
+
+    td {
+        border: 1px solid $tableGray;
+        text-align: center;
+        padding: 9px;
+        color: $darkerBlue;
+    }
+
+    th {
+        color: $darkerBlue;
+        border: 1px solid $tableGray;
+        text-align: center;
+        padding: 10.5px 6.5px;
+    }
+
+    tr {
+        transition: all 0.2s linear;
+    }
+
+    tr:hover {
+        background-color: $tableGrayColor;
+    }
+}
+
+.tableFooter {
+    background-color: #f1f2f4;
+    th {
+        color: #4455ea !important;
+        text-align: center;
+    }
+
+    th:first-child {
+        position: sticky;
+        left: 0;
+        z-index: 99;
+        background-color: #f1f2f4;
+    }
+}
+
+.rc-table-cell-fix-left {
+    background-color: #fff;
+    z-index: 99;
+}

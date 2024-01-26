@@ -1,0 +1,32 @@
+.d_flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+}
+
+.d_grid_4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.d_grid_3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.d_grid_2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.flex_column {
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.flex_row {
+    -ms-flex-direction: row;
+    flex-direction: row;
+}

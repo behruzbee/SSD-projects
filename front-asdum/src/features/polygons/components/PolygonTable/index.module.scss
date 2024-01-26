@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    padding: 0 0 0 14px;
+    max-height: 500px !important;
+}
+.tr {
+    position: relative;
+    border: none;
+    height: 45px;
+}

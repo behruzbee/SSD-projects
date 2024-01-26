@@ -1,0 +1,20 @@
+version: '3.9'
+
+services:
+  app:
+    image: $CI_REGISTRY/$CI_PROJECT_PATH:${CI_ENVIRONMENT_NAME}-${CI_COMMIT_SHORT_SHA}
+    networks:
+      - proxy_network
+    ports:
+      - ${SERVER_PORT}:80
+    environment:
+      MS_HOST:
+      SCHEME:
+      WS_SCHEME:
+      
+    deploy:
+      replicas: ${REPLICAS}
+
+networks:
+  proxy_network:
+    external: true

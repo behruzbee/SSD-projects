@@ -1,0 +1,20 @@
+@import '@styles/base/colors';
+
+.dcontent {
+    padding-top: 0;
+    max-height: 350px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: $subtleColor;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $lightColor;
+        border-radius: 3px 0px 3px 3px;
+    }
+}

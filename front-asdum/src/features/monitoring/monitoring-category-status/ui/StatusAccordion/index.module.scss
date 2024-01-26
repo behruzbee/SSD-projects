@@ -1,0 +1,71 @@
+.badge {
+  width: 38px;
+  height: 28px;
+  border-radius: 1200px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  margin-right: 10px;
+}
+
+.badge,
+.statusTitle,
+.statusSubtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.statusTitle,
+.statusSubtitle,
+.statusValue {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+}
+
+.statusTitle,
+.statusSubtitle {
+  color: #070f3f;
+}
+
+.statusSubtitle {
+  margin-left: 10px;
+}
+
+.statusAccSummary div:first-child {
+  width: 100%;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  //justify-content: space-between;
+}
+
+.statusCount {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: right;
+  letter-spacing: 0.04em;
+  color: #191a1d;
+}
+
+.statusDetail,
+.statusInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.statusValue {
+  color: #a4adb9;
+}
+
+.statusTitle {
+  text-transform: uppercase;
+  justify-content: flex-start;
+}

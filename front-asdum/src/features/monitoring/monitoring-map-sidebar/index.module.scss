@@ -1,0 +1,55 @@
+@import '@styles/base/colors';
+@import '@styles/base/mixins';
+
+
+.form {
+  height: 100%;
+}
+
+.stationImg {
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+}
+
+.element {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  @include element($align: flex-start);
+
+  .elementTitle {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #475366;
+  }
+}
+
+
+.sidebarImg {
+  width: 100%;
+  height: 230px;
+}
+
+.sidebarButton {
+  width: 100%;
+  height: 66px;
+  background-color: #fff;
+  box-shadow: 0px -0.737903px 0px #E8EAED;
+}
+
+.busGos {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+
+  button {
+    text-transform: none;
+    color: #606EEA;
+  }
+}
+

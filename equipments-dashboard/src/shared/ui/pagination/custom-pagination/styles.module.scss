@@ -1,0 +1,23 @@
+.pagination {
+	margin: 0;
+}
+
+.control {
+	border: none;
+	color: #98a2b3;
+	font-size: 0.875rem;
+	font-weight: 500;
+	line-height: 1.125rem;
+	width: 2rem;
+	height: 2rem;
+	&[data-active="true"] {
+		font-weight: 500;
+		color: #98a2b3;
+		border-radius: 0;
+		background-color: #fff;
+		border-bottom: 2px solid #475467;
+		&:not([data-disabled]):hover {
+			background-color: #fff;
+		}
+	}
+}

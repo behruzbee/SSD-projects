@@ -1,0 +1,64 @@
+@import '@styles/base/colors';
+
+.container {
+  background-color: $whiteColor;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $subtleColor;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $lightColor;
+    border-radius: 3px 0px 3px 3px;
+  }
+
+  .table {
+    width: 100%;
+    background-color: $whiteColor;
+    overflow: hidden;
+    border-collapse: collapse;
+
+    td, th {
+      border-bottom: 1px solid $tableGray;
+    }
+
+    .theader {
+      &:hover {
+        background-color: $whiteColor;
+      }
+
+      .th {
+        //box-shadow: 1px 1px 0px $tableGray;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: $darkerBlue;
+        padding: 10.5px 6.5px;
+      }
+    }
+
+    .tbody {
+      &:hover {
+        background-color: $whiteColor;
+      }
+    }
+
+    .td {
+      //box-shadow: 1px 1px 0px $tableGray;
+      color: $darkerBlue;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      padding: 8px 10px;
+      text-align: center;
+    }
+  }
+}

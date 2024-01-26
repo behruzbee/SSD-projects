@@ -1,0 +1,37 @@
+.body {
+    display: flex;
+    position: absolute;
+    right: 30px;
+    top: -5px;
+    z-index: 100;
+    .cover {
+        z-index: 2;
+    }
+
+    .popper {
+        position: static;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .row {
+        height: 68px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 16px;
+    }
+}
+
+.colorBtn {
+    height: 28px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 1px rgb(0 0 0 / 15%), 0 2px 5px -3px rgb(0 0 0 / 15%);
+    border-radius: 3px;
+}

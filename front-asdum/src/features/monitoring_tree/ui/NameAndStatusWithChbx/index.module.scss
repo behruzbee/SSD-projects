@@ -1,0 +1,21 @@
+.statusWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.busStatus {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.chbxStatus {
+    display: flex;
+    align-items: center;
+}

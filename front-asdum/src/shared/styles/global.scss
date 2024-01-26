@@ -1,0 +1,40 @@
+#root {
+    background: #fff;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #606eea;
+    border-radius: 14px 0px 0px 14px;
+}
+
+::-webkit-scrollbar:horizontal {
+    height: 12px;
+}
+
+.toastProgress {
+    background-color: #3492ff;
+}
+
+.css-26l3qy-menu {
+    z-index: 9999999999999999999999999999999999999999999999999 !important;
+}
+
+.css-7fb0v8-MuiPaper-root-MuiAccordion-root,
+.css-19deitw-MuiPaper-root-MuiAccordion-root {
+    background-color: transparent !important;
+}
+
+.css-yw020d-MuiAccordionSummary-expandIconWrapper {
+    color: white !important;
+}
+
+input::-webkit-search-cancel-button {
+    font-size: 20px;
+}

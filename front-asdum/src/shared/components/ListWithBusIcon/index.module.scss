@@ -1,0 +1,25 @@
+.iconBox {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    gap: 6px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.chip {
+    height: 24px !important;
+    cursor: pointer !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none !important;
+    background: #f2f3f4 !important;
+    color: #191a1d !important;
+    border-radius: 40px !important;
+    // padding: 8px 8px 8px 4px;
+}

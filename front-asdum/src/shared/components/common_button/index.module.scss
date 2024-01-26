@@ -1,0 +1,13 @@
+.generalBtn {
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    padding: 12px;
+    white-space: nowrap;
+
+    &:disabled {
+        cursor: not-allowed;
+        pointer-events: all !important;
+        background-color: #e0e0e0 !important;
+    }
+}

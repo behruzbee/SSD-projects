@@ -1,0 +1,78 @@
+@import "@styles/media";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Roboto";
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	max-width: 1320px;
+	margin: 0 auto;
+	padding: 0 15px;
+
+	@include xl {
+		max-width: 1140px;
+	}
+
+	@include lg {
+		max-width: 960px;
+	}
+
+	@include lg {
+		max-width: 720px;
+	}
+
+	@include lg {
+		max-width: 960px;
+	}
+}
+
+.modal-transform-unset {
+	transform: unset !important;
+}
+
+// TODO: fix edit feature inside EditControl
+.leaflet-draw-edit-edit {
+	display: none !important;
+}
+
+.leaflet-div-icon {
+	background: transparent;
+	border: transparent;
+}
+
+.scroll {
+	&::-webkit-scrollbar {
+		width: 5px;
+		height: 5px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: #f1f1f1;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: #888;
+	}
+}
+
+.sidebar-sibling-content {
+	@extend .scroll;
+	width: 100%;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+}

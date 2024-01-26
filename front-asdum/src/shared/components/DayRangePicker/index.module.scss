@@ -1,0 +1,17 @@
+.selected {
+    color: white !important;
+}
+
+.dayPickerContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.dayPickerLabel {
+    color: #070f3f;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    display: block;
+}

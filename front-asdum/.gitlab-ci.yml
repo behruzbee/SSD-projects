@@ -1,0 +1,77 @@
+default:
+  image: node:latest
+  cache:
+    key: "$CI_COMMIT_BRANCH"
+    paths:
+      - ./node_modules
+  tags:
+    - asdum-docker
+  
+
+workflow:
+  rules:
+    - if: $CI_COMMIT_BRANCH == "stage"
+
+stages:
+  - dependency
+  - build
+  - deploy
+  - publish
+
+
+dependency: 
+  stage: dependency
+  environment:
+    name: stage
+  before_script:
+    - npm set progress=false
+  script:
+    - npm cache clean --force
+    - npm install --force
+
+build:
+  stage: build
+  environment:
+    name: stage
+  before_script:
+    - npm set progress=false
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      - dist
+
+deploy:
+  stage: deploy
+  image: docker:latest
+  services:
+    - docker:dind
+  variables:
+    DOCKER_HOST: tcp://docker:2375
+    DOCKER_TLS_CERTDIR: ""
+  environment:
+    name: stage
+  before_script:
+    - echo "$DOCKER_PASSW" | docker login -u "$DOCKER_LOGIN" --password-stdin $DOCKER_HUB
+  script:
+    - docker build --build-arg VITE_DEV=${VITE_DEV} --build-arg VITE_MS_HOST=${VITE_MS_HOST} --build-arg VITE_NOTIFICATION_WEBSOCKET=${VITE_NOTIFICATION_WEBSOCKET} -t ${DOCKER_HUB}${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}:${CI_COMMIT_REF_NAME}-${CI_PIPELINE_IID} -f dockerfile-cicd .
+    - docker tag ${DOCKER_HUB}${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}:${CI_COMMIT_REF_NAME}-${CI_PIPELINE_IID} ${DOCKER_HUB}${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}:${CI_COMMIT_REF_NAME}
+    #- docker push ${DOCKER_HUB}${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}:${CI_COMMIT_REF_NAME}-${CI_PIPELINE_IID}
+    - docker push ${DOCKER_HUB}${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}:${CI_COMMIT_BRANCH}
+    - echo ${VITE_DEV}
+
+
+publish:
+  stage: publish
+  image: ubuntu:latest
+  environment:
+    name: stage
+  before_script:
+    - which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - eval $(ssh-agent -s)
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+  script:
+    - ssh-add <(echo "$STAGING_PRIVATE_KEY")
+    - ssh -p ${STAGING_SSH_PORT} ${STAGING_SSH_USER}@${STAGING_SSH_HOST} "cd ${STAGING_DCOMPOSE_DIR} && docker login -u $DOCKER_LOGIN -p $DOCKER_PASSW $DOCKER_HUB; docker pull ${DOCKER_HUB}${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}:${CI_COMMIT_BRANCH}; docker compose up --build --force-recreate --no-deps -d asdum-frontend"

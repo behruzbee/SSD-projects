@@ -1,0 +1,134 @@
+@import '@styles/base/colors';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+    border-radius: 4px 4px 0 0;
+    transition: 1s all linear;
+
+    .baseSide {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .inputWrapper {
+            height: 40px;
+
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background: #ffffff;
+            border: 1px solid #c6cad8;
+            box-shadow: 0px 4px 12px rgba(184, 185, 230, 0.2);
+            border-radius: 4px;
+            padding: 0 20px;
+
+            .input {
+                border: none;
+                outline: none;
+                height: 100%;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+                display: flex;
+                align-items: flex-end;
+                color: $darkerBlue;
+            }
+        }
+
+        .iconBox {
+            display: flex;
+            align-items: center;
+            padding: 6px 4px;
+
+            .active {
+                border: none;
+                background-color: $darkerColor !important;
+                color: $whiteColor !important;
+            }
+
+            .side {
+                border-radius: 0px;
+                border: 1px solid $violetText;
+                font-size: 10px;
+                box-sizing: border-box;
+                width: 65px;
+                height: 25px;
+                color: $blackColor;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                text-transform: capitalize;
+
+                p {
+                    margin: 0;
+                }
+
+                &:focus-within,
+                &:focus {
+                    border: none;
+                    background-color: $darkerColor !important;
+                    color: $whiteColor !important;
+                }
+            }
+        }
+    }
+
+    .loading {
+        height: 50px !important;
+    }
+
+    .bottomSide {
+        position: absolute;
+        top: 40px;
+        min-height: 50px;
+        width: 100%;
+        background-color: $whiteColor;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+        border-radius: 0 0 4px 4px;
+        display: flex;
+        flex-direction: column;
+        max-height: 200px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        z-index: 10;
+
+        .noResult {
+            text-align: center;
+        }
+
+        .item {
+            min-height: 49px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 16px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $tableGrayColor;
+            }
+
+            p {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+                /* identical to box height, or 121% */
+                margin: 0;
+                display: flex;
+                align-items: center;
+
+                /* Font color */
+
+                color: $darkerBlue;
+            }
+        }
+    }
+}

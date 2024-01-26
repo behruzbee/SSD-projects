@@ -1,0 +1,1 @@
+export {GetUserData} from './ui';

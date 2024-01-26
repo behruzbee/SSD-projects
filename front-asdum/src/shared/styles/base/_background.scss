@@ -1,0 +1,21 @@
+.bg__gray {
+    background: $bgGray;
+    color: $whiteColor;
+}
+
+.fill__gray {
+    & > svg {
+        path {
+            fill: $grayIcon !important;
+        }
+    }
+
+    path {
+        fill: $grayIcon !important;
+    }
+}
+
+.bg__success {
+    background: #e6fef4 !important;
+    color: #06c270 !important;
+}

@@ -1,0 +1,60 @@
+$light-text-color: white;
+$dark-text-color: black;
+$my-class-bg-light: white;
+$my-class-bg-dark: black;
+
+// theme-config.scss
+$themes: (
+    light: (
+        my-class-bg: $my-class-bg-light,
+        text-color: $dark-text-color,
+    ),
+    dark: (
+        my-class-bg: $my-class-bg-dark,
+        text-color: $light-text-color,
+    ),
+);
+
+// mixin.scss
+@mixin themify($themes) {
+    @each $theme, $map in $themes {
+        .theme-#{$theme} & {
+            $theme-map: () !global;
+            @each $key, $submap in $map {
+                $value: map-get(map-get($themes, $theme), '#{$key}');
+                $theme-map: map-merge(
+                    $theme-map,
+                    (
+                        $key: $value,
+                    )
+                ) !global;
+            }
+            @content;
+            $theme-map: null !global;
+        }
+    }
+}
+
+@function themed($key) {
+    @return map-get($theme-map, $key);
+}
+
+// usage
+.myClass {
+    @include themify() {
+        background: themed('my-class-bg');
+        color: themed('text-color');
+    }
+}
+
+@mixin applyThemedBgWithCorrectTextColor($bg-color) {
+    @include themify() {
+        background: themed($bg-color);
+        color: getTextColorBasedOnBG(themed($bg-color));
+    }
+}
+
+// usage
+.myClass {
+    @include applyThemedBgWithCorrectTextColor('my-class-bg');
+}

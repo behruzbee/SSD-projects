@@ -1,0 +1,113 @@
+.tableContainer {
+    margin-top: 20x;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 4px 12px rgba(184, 185, 230, 0.2);
+    border-radius: 16px;
+    position: relative;
+
+    table {
+        border-collapse: separate;
+
+        border-spacing: 0;
+        width: 100%;
+        tr,
+        td,
+        th {
+            // border-right: 1px solid #f0f2f4 !important;
+            border-bottom: 1px solid #f0f2f4 !important;
+            text-align: center;
+            padding: 16px 8px;
+        }
+
+        tr th:first-child,
+        tr td:first-child {
+            border-left: 1px solid #f0f2f4;
+        }
+        tr th:first-child,
+        tr td:first-child {
+            border-left: 1px solid #f0f2f4;
+        }
+
+        // tr th {
+        //     text-align: left;
+        //     border-top: solid 1px #f0f2f4;
+        // }
+
+        /* top-left border-radius */
+        tr:first-child th:first-child {
+            border-top-left-radius: 16px;
+        }
+
+        /* top-right border-radius */
+        tr:first-child th:last-child {
+            border-top-right-radius: 16px;
+        }
+
+        /* bottom-left border-radius */
+        tr:last-child td:first-child {
+            border-bottom-left-radius: 16px;
+        }
+
+        /* bottom-right border-radius */
+        tr:last-child td:last-child {
+            border-bottom-right-radius: 16px;
+        }
+    }
+}
+
+.tabletemplateWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+}
+
+.stickyHeader {
+    position: sticky;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    z-index: 10;
+}
+
+.disabled {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #ededed;
+    opacity: 0.8;
+    border-radius: 16px;
+    z-index: 100;
+    cursor: not-allowed;
+}
+
+.tablePagination {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.virtualised {
+    .table {
+        width: 100%;
+        display: inline-block;
+        border-spacing: 0;
+        border: 1px solid black;
+
+        .tr {
+            width: 100%;
+            border-bottom: 1px solid #000;
+        }
+
+        .th,
+        .td {
+            display: inline-block;
+            margin: 0;
+            padding: 0.5rem;
+        }
+    }
+}

@@ -1,0 +1,81 @@
+.roundedBlue {
+  // @include roundedIns($back: $mainColor, $color: $whiteColor);
+  max-width: 220px;
+  justify-content: center;
+  //text-align: center;
+  word-break: break-word;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #191a1d;
+  text-transform: uppercase;
+}
+
+.roundedGray {
+  background: #f2f3f4;
+  border-radius: 40px;
+  color: #191a1d;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 4px 8px;
+}
+
+.routesWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-bottom: 10px;
+  max-height: 270px;
+  overflow-y: auto;
+}
+
+.roundedTrash {
+  @include roundedIns($back: #f2f3f4, $color: #191a1d);
+  justify-content: space-between;
+  padding: 0 8px;
+  height: 24px;
+  width: 85px;
+}
+
+.trashDiv {
+  background: #ff3b3b;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+
+  .trashIcon {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.routeDiv {
+  @include roundedIns($back: #f2f3f4, $color: #191a1d);
+  justify-content: space-between;
+  padding: 0 8px;
+  height: 24px;
+  width: 85px;
+  border-right-style: none;
+}
+
+.btnAdd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4455ea !important;
+  color: $whiteColor !important;
+  min-width: 24px !important;
+  min-height: 24px !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+
+  .plusIcon {
+    width: 24px;
+    height: 24px;
+  }
+}

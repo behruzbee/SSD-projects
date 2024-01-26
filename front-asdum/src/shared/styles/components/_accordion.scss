@@ -1,0 +1,21 @@
+.expanded {
+    background-color: white;
+    color: black;
+    .css-yw020d-MuiAccordionSummary-expandIconWrapper {
+        & svg {
+            color: #c7c7d2 !important;
+        }
+    }
+
+    .MuiButtonBase-root,
+    .MuiAccordionSummary-root {
+        background-color: #fff;
+        color: #070f3f !important;
+        // filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.1));
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 32px;
+    }
+}

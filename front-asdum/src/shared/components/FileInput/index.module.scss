@@ -1,0 +1,73 @@
+.selectedFile,
+.selectFile {
+  width: 100%;
+  height: 80px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+
+  p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+.selectFile {
+  flex-direction: column;
+  justify-content: center;
+  border: 1px dashed #C7C7D2;
+  cursor: pointer;
+  gap: 8px;
+
+  p:first-child {
+    color: #4455EA;
+  }
+
+  p:last-child {
+    color: #A4ADB9;
+  }
+
+
+}
+
+.selectedFile {
+  border: 1px solid #C7C7D2;
+  justify-content: space-between;
+  padding: 0 25px;
+
+  button {
+    min-width: 20px !important;
+    height: 20px !important;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
+.fileInfo,
+.fileItem {
+  display: flex;
+  align-items: center;
+}
+
+.fileInfo {
+  gap: 20px;
+}
+
+.fileItem {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+
+  p:first-child {
+    color: #4455EA;
+  }
+
+  p:last-child {
+    color: #A4ADB9;
+  }
+}

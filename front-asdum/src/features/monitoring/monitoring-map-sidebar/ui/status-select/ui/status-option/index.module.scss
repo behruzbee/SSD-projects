@@ -1,0 +1,13 @@
+.statusOption {
+  width: 300px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22px;
+  cursor: pointer;
+}
+
+.statusOption:not(:last-child) {
+  border-bottom: 1px solid #E8EAED;
+}

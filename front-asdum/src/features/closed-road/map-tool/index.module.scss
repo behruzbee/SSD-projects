@@ -1,0 +1,17 @@
+.closedRoadConstructorWrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.mapContainer {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,45 @@
+@import '@src/shared/styles/base/colors';
+
+.inputWrapper {
+  display: flex;
+  flex-direction: row;
+
+  .timeback {
+    background: $whiteColor;
+    border: 1px solid #c6cad8;
+    border-radius: 4px 0px 0px 4px;
+    width: 43px;
+    height: 40px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: $mainColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: none;
+  }
+
+  .input[type='time']::-webkit-calendar-picker-indicator {
+    background: none;
+    display: none;
+  }
+  .input {
+    border: 1px solid #c6cad8;
+    box-sizing: border-box;
+    border-radius: 0px 4px 4px 0px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $darkerBlue;
+    padding: 8px 12px;
+    height: 40px;
+    text-align: center;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

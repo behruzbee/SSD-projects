@@ -1,0 +1,6 @@
+node_modules
+dist
+webpack
+.eslintrc.cjs
+webpack.config.babel.js
+.babel.config.js

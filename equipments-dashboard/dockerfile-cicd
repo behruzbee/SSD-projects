@@ -1,0 +1,12 @@
+FROM nginx
+ARG VITE_BASE_URL
+ENV VITE_BASE_URL=$VITE_BASE_URL
+
+RUN ln -sf /dev/stdout /var/log/nginx/access.log \
+    && ln -sf /dev/stderr /var/log/nginx/error.log
+
+COPY ./vhost.conf /etc/nginx/templates/default.conf.template
+COPY ./dist/ /usr/share/nginx/html
+
+CMD ["nginx", "-g", "daemon off;"]
+

@@ -1,0 +1,16 @@
+FROM nginx
+ARG VITE_DEV
+ARG VITE_NOTIFICATION_WEBSOCKET
+ARG VITE_MS_HOST
+ENV VITE_DEV=dash3api.asdum.uz/api/v1/asdum/ VITE_NOTIFICATION_WEBSOCKET=https://dash3api.asdum.uz/ws VITE_MS_HOST=dash3api.asdum.uz/api/v1/asdum/
+ENV VITE_SCHEME=https://
+ENV VITE_WS_SCHEME=ws
+
+RUN ln -sf /dev/stdout /var/log/nginx/access.log \
+    && ln -sf /dev/stderr /var/log/nginx/error.log
+
+COPY ./vhost.conf /etc/nginx/templates/default.conf.template
+COPY ./dist/ /usr/share/nginx/html
+
+CMD ["nginx", "-g", "daemon off;"]
+

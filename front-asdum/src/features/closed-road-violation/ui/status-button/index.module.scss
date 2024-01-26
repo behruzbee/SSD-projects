@@ -1,0 +1,55 @@
+.common {
+    display: flex;
+    text-transform: none;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.chooseStatus {
+    button {
+        height: 40px;
+        border: 1px solid #606eea;
+        background-color: #fff;
+        border-radius: 4px;
+        font-size: 13px;
+        line-height: 15px;
+        color: #191a1d;
+        &:hover {
+            background-color: #606eea;
+            color: #fff;
+        }
+    }
+}
+// .chooseStatus:hover{
+//     background-color: #606EEA;
+//     color: #fff;
+// }
+.agreed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 152px;
+    height: 36px;
+    border-radius: 40px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #fff;
+    background-color: #2eb000;
+    .agreedTxt {
+        text-transform: capitalize;
+    }
+}
+.disagreed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 152px;
+    height: 36px;
+    border-radius: 40px;
+    background-color: #ff3b3b;
+    color: #fff;
+    .disagreedTxt {
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
